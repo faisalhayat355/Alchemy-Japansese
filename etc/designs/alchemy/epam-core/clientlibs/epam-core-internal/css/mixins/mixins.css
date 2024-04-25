@@ -1,0 +1,963 @@
+/*
+ * All Rights Reserved. All information contained herein is, and remains the property of EPAM Systems, Inc.
+ * and/or its suppliers and is protected by international intellectual property law. Dissemination of this
+ * information or reproduction of this material is strictly forbidden, unless prior written permission is
+ * obtained from EPAM Systems, Inc
+ */
+@import "variables/colors.css";
+@import "variables/gradients.css";
+
+.clearfix() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.animate(@property: all, @duration: .5s, @timing-function: ease, @delay: .01ms) {
+    transition: @property @duration @timing-function @delay;
+}
+
+.translateX(@x:@x) {
+    -moz-transform: translateX(@x);
+    -webkit-transform: translateX(@x);
+    -o-transform: translateX(@x);
+    -ms-transform: translateX(@x);
+    transform: translateX(@x);
+}
+
+.translateY(@y:@y) {
+    -moz-transform: translateY(@y);
+    -webkit-transform: translateY(@y);
+    -o-transform: translateY(@y);
+    -ms-transform: translateY(@y);
+    transform: translateY(@y);
+}
+
+.hide-text() {
+    text-indent: -999rem;
+    overflow: hidden;
+}
+
+.gradient-text(@deg, @color, @colors) {
+    /* stylelint-disable declaration-block-no-duplicate-properties */
+    background-color: @color;
+    background-image: -webkit-linear-gradient(@deg, @colors);
+    background-image: -moz-linear-gradient(@deg, @colors);
+    background-image: -o-linear-gradient(@deg, @colors);
+    background-image: -ms-linear-gradient(@deg, @colors);
+    background-image: linear-gradient(@deg, @colors);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    /* stylelint-enable */
+}
+
+.no-tap-color() {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    .user-select(none);
+}
+
+.user-select(@value) {
+    -webkit-user-select: @value;
+    -moz-user-select: @value;
+    -ms-user-select: @value;
+    user-select: @value;
+}
+
+.text-align-mixin() {
+    &--left {
+        text-align: left;
+    }
+
+    &--right {
+        text-align: right;
+    }
+
+    &--center {
+        text-align: center;
+    }
+}
+
+.font-families() {
+    .source-sans-light {
+        font-family: @ff-base;
+        font-weight: 300;
+    }
+
+    .source-sans {
+        font-family: @ff-base;
+    }
+
+    .source-sans-bold {
+        font-family: @ff-base;
+        font-weight: 700;
+    }
+
+    .museo-sans-light {
+        font-family: @ff-title-secondary;
+        font-weight: 100;
+        letter-spacing: .01em;
+    }
+
+    .museo-sans {
+        font-family: @ff-title-secondary;
+    }
+
+    .museo-sans-300 {
+        font-family: @ff-title-secondary;
+        font-weight: 300;
+    }
+
+    .museo-sans-500 {
+        font-family: @ff-title-secondary;
+        font-weight: 500;
+    }
+
+    .museo-sans-700 {
+        font-family: @ff-title-secondary;
+        font-weight: 700;
+    }
+
+    .museo-sans-bold {
+        font-family: @ff-title-secondary;
+        font-weight: 900;
+    }
+
+    .museo-slab {
+        font-family: @ff-title-primary;
+        font-weight: 300;
+    }
+
+    .museo-slab-900 {
+        font-family: @ff-title-primary;
+        font-weight: 900;
+    }
+}
+
+.test-io-font-colors() {
+    .color-tio-teal {
+        color: @color-tio-teal;
+    }
+
+    .color-tio-violet {
+        color: @color-tio-violet;
+    }
+
+    .color-tio-light-grey {
+        color: @color-tio-light-grey;
+    }
+
+    .color-tio-medium-grey {
+        color: @color-tio-medium-grey;
+    }
+}
+
+.font-colors() {
+    .color-white {
+        color: @color-white;
+    }
+
+    .color-smoke-gray {
+        color: @color-smoke-gray;
+    }
+
+    .color-light-blue {
+        color: @color-light-blue;
+    }
+
+    .color-light-green {
+        color: @color-light-green;
+    }
+
+    .color-blue {
+        color: @color-blue;
+    }
+
+    .color-dark-blue {
+        color: @color-dark-blue;
+    }
+
+    .color-almost-black {
+        color: @color-almost-black;
+    }
+
+    .color-light-red {
+        color: @color-light-red;
+    }
+
+    .color-midnight-blue {
+        color: @color-midnight-blue;
+    }
+
+    .color-cornflower-blue {
+        color: @color-cornflower-blue;
+    }
+
+    .color-firefly-blue {
+        color: @color-firefly-blue;
+    }
+
+    .color-light-yellow {
+        color: @color-light-yellow;
+    }
+
+    .color-ec-light-blue {
+        color: @color-ec-light-blue;
+    }
+
+    .color-ec-dark-blue {
+        color: @color-ec-dark-blue;
+    }
+
+    .color-black {
+        color: @color-black;
+    }
+
+    .color-dark-grey {
+        color: @color-dark-grey;
+    }
+
+    .color-periwinkle-blue {
+        color: var(--epam-rte-purple-color);
+    }
+
+    .test-io-font-colors();
+
+    .color-white,
+    .color-light-blue,
+    .color-light-green,
+    .color-blue,
+    .color-dark-blue,
+    .color-almost-black,
+    .color-light-red,
+    .color-light-yellow {
+        .underlined {
+            color: inherit;
+        }
+    }
+
+    .rte-text-primary-color {
+        color: var(--epam-rte-text-primary-color);
+    }
+
+    .rte-text-gradient,
+    .rte-text-gradient span {
+        .gradient-text(90.38deg; var(--epam-rte-text-primary-color); var(--epam-rte-text-gradient));
+        &.text-gradient-s {
+            background-image: linear-gradient(to right, var(--epam-rte-test-gradient-s));
+        }
+        &.text-gradient-m {
+            background-image: linear-gradient(to right, var(--epam-rte-test-gradient-m));
+        }
+    }
+}
+
+@colors: @color-almost-black,
+    @color-light-blue,
+    @color-blue,
+    @color-cornflower-blue,
+    @color-dark-blue,
+    @color-midnight-blue,
+    @color-firefly-blue,
+    @color-light-green,
+    @color-light-red,
+    @color-white,
+    @color-white-smoke,
+    @color-smoke-gray,
+    @color-dark-gray,
+    @color-light-yellow,
+    @color-silver,
+    @color-eclipse,
+    @color-ec-light-blue,
+    @color-ec-dark-blue,
+    @color-black,
+    @color-tio-teal,
+    @color-tio-violet,
+    @color-tio-light-grey,
+    @color-tio-medium-grey,
+    @color-ec-white;
+
+@classes: bg-color-almost-black,
+    bg-color-light-blue,
+    bg-color-blue,
+    bg-color-cornflower-blue,
+    bg-color-dark-blue,
+    bg-color-midnight-blue,
+    bg-color-firefly-blue,
+    bg-color-light-green,
+    bg-color-light-red,
+    bg-color-white,
+    bg-color-white-smoke,
+    bg-color-smoke-gray,
+    bg-color-dark-gray,
+    bg-color-light-yellow,
+    bg-color-continuum-silver-grey,
+    bg-color-continuum-dark-grey,
+    bg-color-ec-light-blue,
+    bg-color-ec-dark-blue,
+    bg-color-black,
+    bg-color-tio-teal,
+    bg-color-tio-violet,
+    bg-color-tio-light-grey,
+    bg-color-tio-medium-grey,
+    bg-color-ec-white;
+
+.make-background-color-classes(@i: length(@colors), @isParent: true) when (@i > 0) {
+    .make-background-color-classes(@i - 1, @isParent);
+    @color: extract(@colors, @i);
+    @class: extract(@classes, @i);
+    & when (@isParent=true) {
+        .@{class} {
+            background-color: @color;
+        }
+    }
+
+    & when (@isParent=false) {
+        .@{class} & {
+            background-color: @color;
+        }
+    }
+}
+
+.background-colors(@isParent: true, @defaultColor:false) {
+    & when not (@defaultColor=false) {
+        .section-ui & {
+            background-color: @defaultColor;
+        }
+    }
+
+    .make-background-color-classes(@isParent: @isParent);
+}
+
+.bullet-list() {
+    margin: 1.4rem 0 0;
+
+    li {
+        position: relative;
+        padding: 0 0 .4rem 2.3rem;
+    }
+
+    > li:before {
+        content: "";
+        background-color: @color-light-blue;
+        border-radius: 50%;
+        top: -.4rem;
+        width: .4rem;
+        height: .4rem;
+        position: relative;
+        margin: 0 .9rem 0 -1.3rem;
+        display: inline-block;
+
+        @media print {
+            content: "\2022";
+            top: 0;
+            /* stylelint-disable  declaration-no-important */
+            background-color: transparent !important;
+            /* stylelint-enable */
+        }
+    }
+
+    ul {
+        padding: .9rem 0 0 .3rem;
+        list-style: none;
+
+        li {
+            padding-left: 1rem;
+
+            &:before {
+                content: "-";
+                /* stylelint-disable  declaration-no-important*/
+                color: inherit !important;
+                /* stylelint-enable */
+                background: none;
+                top: 0;
+                left: -.3rem;
+                margin: 0 .5rem 0 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.numbered-list() {
+    li {
+        margin-left: 1rem;
+        padding-left: 2rem;
+        text-indent: -2rem;
+    }
+
+    .test-io & {
+        li {
+            padding: 0 0 1.6rem;
+            margin-left: 3rem;
+        }
+    }
+}
+
+.text-fs(@font-size, @editor-scale) {
+    @name: @font-size * 10;
+    @size: @font-size / @editor-scale;
+    .font-size-@{name} {
+        font-size: ~"@{size}rem";
+    }
+}
+
+.font-sizes(@editor-scale: 1) {
+    .text-fs(1.2, @editor-scale);
+    .text-fs(1.4, @editor-scale);
+    .text-fs(1.5, @editor-scale);
+    .text-fs(1.6, @editor-scale);
+    .text-fs(1.7, @editor-scale);
+    .text-fs(1.8, @editor-scale);
+    .text-fs(1.9, @editor-scale);
+    .text-fs(2.0, @editor-scale);
+    .text-fs(2.1, @editor-scale);
+    .text-fs(2.2, @editor-scale);
+    .text-fs(2.3, @editor-scale);
+    .text-fs(2.4, @editor-scale);
+    .text-fs(3.0, @editor-scale);
+    .text-fs(3.1, @editor-scale);
+    .text-fs(3.6, @editor-scale);
+    .text-fs(4.0, @editor-scale);
+    .text-fs(4.1, @editor-scale);
+    .text-fs(4.4, @editor-scale);
+    .text-fs(4.8, @editor-scale);
+    .text-fs(5.1, @editor-scale);
+    .text-fs(5.6, @editor-scale);
+    .text-fs(6, @editor-scale);
+    .text-fs(6.2, @editor-scale);
+    .text-fs(6.4, @editor-scale);
+    .text-fs(6.5, @editor-scale);
+    .text-fs(8.8, @editor-scale);
+    .text-fs(10.0, @editor-scale);
+    .text-fs(12.0, @editor-scale);
+    .text-fs(12.5, @editor-scale);
+    .text-fs(15.0, @editor-scale);
+
+    .font-size-80-33,
+    .font-size-80-44 {
+        @size: 8 / @editor-scale;
+        font-size: ~"@{size}rem";
+    }
+}
+
+.section-paddings(@lateral: 2rem) {
+    &--padding-small {
+        padding: 3.4rem @lateral;
+    }
+    &--padding-normal {
+        padding: 6.8rem @lateral;
+    }
+    &--padding-large {
+        padding: 10.2rem @lateral;
+    }
+    &--padding-extra-large {
+        padding: 13.6rem @lateral;
+    }
+}
+
+.layering-section(@rules) {
+    .section-ui .section-ui.section-ui[class*="bg-color"] .layering-section__overlay {
+        @rules();
+    }
+}
+
+.logo-colored-section(@rules) {
+    /* stylelint-disable max-line-length */
+    [class*="bg-color"]:not(.bg-color-white):not(.bg-color-smoke-gray):not(.bg-color-white-smoke):not(.bg-color-ec-light-blue):not(.bg-color-light-yellow) {
+        /* stylelint-enable */
+        @rules();
+    }
+}
+
+.link-colored-section(@rules) {
+    /* stylelint-disable max-line-length */
+    [class*="bg-color"]:not(.bg-color-white):not(.bg-color-almost-black):not(.bg-color-smoke-gray):not(.bg-color-ec-dark-blue):not(.bg-color-black):not(.bg-color-tio-light-grey):not(.bg-color-tio-medium-grey):not(.bg-color-tio-teal):not(.bg-color-ec-white):not(.bg-color-white-smoke) {
+        /* stylelint-enable */
+        @rules();
+    }
+}
+
+.colored-section(@rules, @include-black: true, @include-ec-light-blue: false)
+    when (@include-black = true) and (@include-ec-light-blue = true) {
+    [class*="bg-color"]:not(.bg-color-smoke-gray):not(.bg-color-white) {
+        @rules();
+    }
+}
+
+.colored-section(@rules, @include-black: true, @include-ec-light-blue: false)
+    when (@include-black = true) and (@include-ec-light-blue = false) {
+    /* stylelint-disable max-line-length */
+    [class*="bg-color"]:not(.bg-color-smoke-gray):not(.bg-color-white):not(.bg-color-ec-light-blue):not(.bg-color-tio-light-grey):not(.bg-color-tio-teal):not(.bg-color-tio-medium-grey):not(.bg-color-tio-violet) {
+        @rules();
+    }
+    /* stylelint-enable */
+}
+
+.colored-section(@rules, @include-black: true, @include-ec-light-blue: false)
+    when (@include-black = false) and (@include-ec-light-blue = false) {
+    /* stylelint-disable   max-line-length*/
+    [class*="bg-color"]:not(.bg-color-smoke-gray):not(.bg-color-white):not(.bg-color-almost-black):not(.bg-color-dark-blue):not(.bg-color-ec-dark-blue):not(.bg-color-black):not(.bg-color-tio-violet):not(.bg-color-tio-teal):not(.bg-color-tio-light-grey):not(.bg-color-tio-medium-grey) {
+        @rules();
+    }
+    /* stylelint-enable*/
+}
+
+.colored-section(@rules, @include-black: true, @include-ec-light-blue: false)
+    when (@include-black = false) and (@include-ec-light-blue = true) {
+    [class*="bg-color"]:not(.bg-color-smoke-gray):not(.bg-color-white):not(.bg-color-almost-black) {
+        @rules();
+    }
+}
+
+.section-default(@rules) {
+    .section-ui .section-ui:not(.bg-color-almost-black) {
+        @rules();
+    }
+}
+
+.section-default(@rules, @raw-section: false) when (@raw-section = true) {
+    .section-ui:not([class*="bg-color"]) {
+        @rules();
+    }
+}
+
+.triangle-base() {
+    /*
+        Usage
+        .triangle(@direction, @size, @color)
+        .triangle(@direction, @width, @height, @color)
+    */
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.triangle(@direction, @size, @color) {
+    .triangle(@direction, @size * 2, @size, @color);
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = up) {
+    .triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-bottom: @height solid @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = down) {
+    .triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-top: @height solid @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = left) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-right: @height solid @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction = right) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-left: @height solid @color;
+}
+
+.scalingText(@mobile-font-size, @tablet-font-size, @desktop-font-size) {
+    font-size: @mobile-font-size;
+
+    @media @tablet {
+        font-size: @tablet-font-size;
+    }
+
+    @media @desktop {
+        font-size: @desktop-font-size;
+    }
+}
+
+.image-rounded(@padding: 2.1rem) {
+    border-radius: 100%;
+    padding: @padding;
+    border: 1px solid @color-smoke-gray;
+    box-sizing: content-box;
+}
+
+.pattern-gradient() {
+    background: url("../../../../images/common/diagonal-pattern.png") 50% 0;
+}
+
+.placeholder-styles(@rules) {
+    /* stylelint-disable selector-no-vendor-prefix */
+    &::placeholder {
+        @rules();
+    }
+
+    &:-ms-input-placeholder {
+        @rules();
+    }
+
+    &::-ms-input-placeholder {
+        @rules();
+    }
+    /* stylelint-enable */
+}
+
+.reset-height() {
+    visibility: visible;
+    height: 100%;
+    max-height: 1000rem;
+    opacity: 1;
+}
+
+.full-width-in-section() {
+    .section-ui & {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.animate-form-element() {
+    transition: opacity .4s ease;
+    overflow: hidden;
+}
+
+.hide-form-element() {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-form-element() {
+    max-height: 3000rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.toggle-form-element(@element-name) {
+    @show-selector: show-;
+
+    &.@{show-selector}@{element-name} {
+        & > form,
+        .form-component__disclaimer {
+            .hide-form-element();
+            overflow: hidden;
+        }
+
+        .form-component__@{element-name} {
+            .show-form-element();
+        }
+    }
+}
+
+.toggle-gated-element(@element-name) {
+    @show-selector: show-;
+
+    &.@{show-selector}@{element-name} {
+        & > form,
+        .form-component__disclaimer {
+            .hide-form-element();
+        }
+
+        .gated-form__@{element-name} {
+            .show-form-element();
+        }
+    }
+}
+
+.input-defaults() {
+    display: block;
+    width: 100%;
+    height: @input-height-default;
+    padding: 0 2rem;
+    font: 300 1.7rem/2.6rem @ff-base;
+    border: 1px solid @color-gray;
+    background-color: @color-white;
+
+    .placeholder-styles({
+        color: @color-dark-gray;
+    });
+}
+
+.search-error-message() {
+    font: 900 2rem/3.4rem @ff-title-secondary;
+    color: @color-light-blue;
+    padding: 1.9rem 2rem 4.3rem;
+    text-align: center;
+    border-bottom: 1px solid @color-gray-alto;
+
+    @media @desktop {
+        padding-top: 1rem;
+        padding-bottom: 6rem;
+        text-align: left;
+    }
+
+    @media @wide-desktop {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.cursor-drag() {
+    /* stylelint-disable declaration-block-no-duplicate-properties */
+    &:hover {
+        cursor: pointer;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+    }
+
+    &:active {
+        cursor: pointer;
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+    }
+    /* stylelint-enable */
+}
+
+.close-button() {
+    @button-size: 2.6rem;
+    @button-position-mobile: 1.7rem;
+
+    position: absolute;
+    overflow: hidden;
+    width: @button-size;
+    height: @button-size;
+    top: @button-position-mobile;
+    right: @button-position-mobile;
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: @color-white;
+        top: 50%;
+        left: 50%;
+    }
+
+    &:after {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:before {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+.svg-pointer() {
+    pointer-events: none;
+
+    .iOS &,
+    .ie & {
+        pointer-events: auto;
+    }
+}
+
+.focus-state(@color: @color-blue) {
+    /* stylelint-disable */
+    &:focus-visible {
+        outline: .2rem solid @color;
+    }
+    /* stylelint-enable */
+}
+
+.default-color-dependencies(@class-to-apply) {
+    &.color-white,
+    &.color-white-smoke,
+    &.color-smoke-gray,
+    &.color-continuum-silver-grey,
+    &.color-ec-light-blue {
+        .@{class-to-apply} {
+            color: @color-dark-gray;
+        }
+    }
+
+    &.color-light-blue,
+    &.color-light-green,
+    &.color-blue,
+    &.color-almost-black,
+    &.color-light-red,
+    &.color-dark-blue,
+    &.color-cornflower-blue,
+    &.color-midnight-blue,
+    &.color-firefly-blue,
+    &.color-light-yellow,
+    &.color-continuum-dark-grey,
+    &.color-ec-dark-blue,
+    &.color-black {
+        .@{class-to-apply} {
+            color: @color-white;
+        }
+    }
+
+    &.color-white-smoke {
+        .@{class-to-apply} {
+            color: @color-almost-black;
+        }
+    }
+}
+
+.lists-mixin(@color) {
+    .bullet-list > li:before {
+        background-color: @color;
+    }
+
+    .numbered-list {
+        li {
+            &::marker {
+                color: @color;
+            }
+
+            &:before {
+                color: @color;
+            }
+        }
+    }
+}
+
+.list-structure() {
+    .bullet-list > li:before {
+        background-color: @color-dark-gray;
+
+        .test-io & {
+            background-color: @color-almost-black;
+        }
+    }
+
+    li:before {
+        color: @color-dark-gray;
+    }
+
+    .numbered-list > li::marker {
+        background-color: @color-dark-gray;
+        color: @color-dark-gray;
+
+        .test-io & {
+            background-color: @color-almost-black;
+            color: @color-dark-gray;
+        }
+    }
+
+    li::marker {
+        color: @color-dark-gray;
+    }
+}
+
+.bold-underlined-hover-link-color-dependency() {
+    .bg-color-white,
+    .bg-color-white-smoke,
+    .bg-color-ec-white,
+    .bg-color-light-blue,
+    .bg-color-light-green,
+    .bg-color-blue,
+    .bg-color-light-red,
+    .bg-color-smoke-gray,
+    .bg-color-light-yellow,
+    .bg-color-dark-blue,
+    .bg-color-ec-light-blue,
+    .bg-color-tio-teal,
+    .bg-color-tio-light-grey,
+    .bg-color-tio-medium-grey {
+        .bold-underlined-hover {
+            color: @color-almost-black;
+            &:hover {
+                color: @color-almost-black;
+            }
+            .arrow {
+                &:after {
+                    background-color: @color-almost-black;
+                }
+                &:before {
+                    border-color: @color-almost-black;
+                }
+            }
+        }
+    }
+}
+
+.underlined-link-color-dependency() {
+    .bg-color-white,
+    .bg-color-white-smoke,
+    .bg-color-ec-white,
+    .bg-color-light-blue,
+    .bg-color-light-green,
+    .bg-color-blue,
+    .bg-color-light-red,
+    .bg-color-smoke-gray,
+    .bg-color-light-yellow,
+    .bg-color-dark-blue,
+    .bg-color-ec-light-blue {
+        .underlined {
+            color: @color-dark-gray;
+            &:hover {
+                color: @color-almost-black;
+            }
+        }
+    }
+}
+
+.set-button-color(@gradientDegree, @gradient, @border, @background, @color, @backgroundHover, @colorHover) {
+    background-color: @border;
+    background-image: linear-gradient(@gradientDegree, @gradient);
+
+    .button__inner {
+        background: @background;
+        color: @color;
+    }
+
+    .no-touchevents &:hover,
+    &:active {
+        .button__inner {
+            background-color: @backgroundHover;
+            color: @colorHover;
+        }
+    }
+}
+
+.set-underline-properties(@thickness, @offset: .3rem) {
+    text-decoration: underline;
+    /* stylelint-disable */
+    text-decoration-thickness: @thickness;
+    text-underline-offset: @offset;
+    /* stylelint-enable */
+}
+
+.set-size(@height, @width) {
+    height: @height;
+    width: @width;
+}
+
+.set-link-with-arrow-hover() {
+    .bg-gradient & {
+        --link-hover-color: @color-black-opacity-80;
+    }
+
+    color: var(--link-color);
+
+    &:hover {
+        color: var(--link-hover-color);
+        -webkit-text-decoration-color: var(--link-hover-color);
+
+        .arrow-link__title {
+            color: var(--link-hover-color);
+        }
+
+        .arrow-link__arrow {
+            svg {
+                fill: var(--link-hover-color);
+            }
+        }
+    }
+}

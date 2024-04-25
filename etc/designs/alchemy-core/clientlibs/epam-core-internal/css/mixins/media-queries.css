@@ -1,0 +1,46 @@
+/*
+ * All Rights Reserved. All information contained herein is, and remains the property of EPAM Systems, Inc.
+ * and/or its suppliers and is protected by international intellectual property law. Dissemination of this
+ * information or reproduction of this material is strictly forbidden, unless prior written permission is
+ * obtained from EPAM Systems, Inc
+ */
+// Breakpoints
+@mobile-point: 395px;
+@wide-mobile-point: 576px;
+@mobile-max: 767px;
+@tablet-point: 768px;
+@wide-tablet-point: 1024px;
+@desktop-point: 992px;
+@wide-desktop-point: 1130px;
+@broad-desktop-point: 1340px;
+@responsive-point: 991px;
+
+// Queries
+@landscape: ~"screen and (orientation: landscape)";
+
+@mobile-middle: ~"screen and (max-width: @{mobile-point})";
+@mobile: ~"screen and (max-width: @{wide-mobile-point})";
+@wide-mobile: ~"screen and (min-width: @{wide-mobile-point})";
+@tablet: ~"screen and (min-width: @{tablet-point})";
+@wide-tablet: ~"screen and (min-width: @{wide-tablet-point})";
+@desktop: ~"screen and (min-width: @{desktop-point})";
+@wide-desktop: ~"screen and (min-width: @{wide-desktop-point})";
+@broad-desktop: ~"screen and (min-width: @{broad-desktop-point})";
+
+// Custom queries
+@small-desktop-point: 1025px;
+@desktop-short-point: 1441px;
+@full-desktop-point: 1920px;
+@wide-desktop-extended-point: 1170px;
+@wide-desktop-scrolling-point: 1140px;
+@broad-desktop-extended-point: 1921px;
+
+@small-desktop: ~"screen and (min-width: @{small-desktop-point})";
+@desktop-short: ~"screen and (min-width: @{desktop-short-point})";
+@full-desktop: ~"screen and (min-width: @{full-desktop-point})";
+@only-responsive: ~"screen and (max-width: @{responsive-point})";
+@only-mobile: ~"screen and (max-width: @{mobile-max})";
+@wide-desktop-extended: ~"screen and (min-width: @{wide-desktop-extended-point})";
+@broad-desktop-df: ~"screen and (max-width: @{wide-desktop-extended-point})";
+@broad-desktop-sb: ~"screen and (min-width: @{wide-desktop-scrolling-point})";
+@broad-desktop-extended: ~"screen and (min-width: @{broad-desktop-extended-point})";

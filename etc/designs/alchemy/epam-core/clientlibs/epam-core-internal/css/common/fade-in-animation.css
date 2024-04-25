@@ -1,0 +1,1708 @@
+/*
+ * All Rights Reserved. All information contained herein is, and remains the property of EPAM Systems, Inc.
+ * and/or its suppliers and is protected by international intellectual property law. Dissemination of this
+ * information or reproduction of this material is strictly forbidden, unless prior written permission is
+ * obtained from EPAM Systems, Inc
+ */
+
+@fade-in-duration: 300ms;
+@fade-in-timing-function: linear;
+
+.fade-in-animation-featured-content() {
+  .featured-content-ui-23 {
+    &__header,
+    &__content-type,
+    &__continuum,
+    &__tags,
+    &__continuum-container,
+    &__link-icon {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__continuum-container {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__description {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__link-icon {
+      .theme-animation & {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-header() {
+  .theme-animation .header-ui-23 {
+    transition: background-color @fade-in-duration @fade-in-timing-function,
+      box-shadow @fade-in-duration @fade-in-timing-function;
+
+    .header__content {
+      transition: box-shadow @fade-in-duration @fade-in-timing-function;
+    }
+
+    .header__inner {
+      transition: box-shadow @fade-in-duration @fade-in-timing-function;
+    }
+
+    .header__logo {
+      transition: height 0.4s ease,
+        filter @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-hamburger() {
+  .theme-animation {
+    .hamburger-menu-ui-23 {
+      .hamburger-menu__third-level-menu {
+        .top-navigation-logo-dark,
+        .top-navigation-logo-light {
+          transition: filter @fade-in-duration @fade-in-timing-function;
+        }
+        .top-navigation-logo-link--text {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-footer() {
+  .theme-animation .footer-ui-23 {
+    transition: background-color @fade-in-duration @fade-in-timing-function;
+  }
+}
+
+.fade-in-animation-cta-button() {
+  .theme-animation .cta-button-ui-23 {
+    transition: background-color @fade-in-duration @fade-in-timing-function;
+
+    &:after {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+
+    .cta-button__text {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-top-navigation() {
+  .theme-animation .top-navigation-ui-23 {
+    .top-navigation__item-link {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-location-selector() {
+  .theme-animation .location-selector-ui-23 {
+    .location-selector {
+      &__title,
+      &__link,
+      &__button-language {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__button {
+        &-white-arrow {
+          transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      &__panel {
+        transition: background @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-mobile-location-selector() {
+  .theme-animation {
+    .mobile-location-selector {
+      &__title {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    .mobile-location-selector-ui-23 {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+
+      .mobile-location-selector {
+        &__link,
+        &__button {
+          transition: color @fade-in-duration @fade-in-timing-function;
+
+          .location-selector__button-white-arrow {
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-header-search() {
+  .theme-animation .header-search-ui-23 {
+    .header-search {
+      &__panel {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__search-label {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__submit {
+        transition: color @fade-in-duration @fade-in-timing-function;
+
+        &:after {
+          transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      &__submit-text {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__input {
+        transition: border-bottom @fade-in-duration @fade-in-timing-function,
+          color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-frequent-searches() {
+  .theme-animation .frequent-searches-ui-23 {
+    transition: color @fade-in-duration @fade-in-timing-function;
+  }
+}
+
+.fade-in-animation-search-icon-gradient() {
+  .theme-animation .search-icon:after {
+    transition: opacity @fade-in-duration @fade-in-timing-function;
+  }
+}
+
+.fade-in-animation-theme-switcher() {
+  .theme-animation {
+    .mobile-theme-switcher {
+      .theme-switcher-label {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    div.theme-switcher {
+      transition: border-color @fade-in-duration @fade-in-timing-function;
+
+      &:before,
+      &:after {
+        transition: color @fade-in-duration @fade-in-timing-function,
+          background-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-event-details-page() {
+  .event-details-page-23 {
+    &__summary,
+    &__date,
+    &__left-column-title,
+    &__right-column-title {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__right-column & {
+      &__date,
+      &__main-title,
+      &__description-element {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-detail-pages-filter() {
+  .detail-pages-filter-23 {
+    &__title,
+    &__filter-panel-btn,
+    &__filter-list-selected-text,
+    &__filter-btn-clear,
+    &__filter-list-btn-clear,
+    &__filter-tags-btn-clear,
+    &__filter-tag-label,
+    &__filter-tag-btn-remove {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &-ui,
+    &__filter-top {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__filter-list-item {
+      transition: border-bottom-color @fade-in-duration @fade-in-timing-function,
+        border-top-color @fade-in-duration @fade-in-timing-function,
+        color @fade-in-duration @fade-in-timing-function;
+
+      svg {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__filter-panel {
+      &-closed {
+        transition: background-color @fade-in-duration @fade-in-timing-function,
+          display @fade-in-duration @fade-in-timing-function;
+      }
+
+      &-divider {
+        .theme-animation & {
+          .divider__color {
+            transition: background-color @fade-in-duration
+                @fade-in-timing-function,
+              color @fade-in-duration @fade-in-timing-function;
+          }
+        }
+
+        .detail-pages-filter-23__filter_expanded & {
+          transition: background @fade-in-duration @fade-in-timing-function,
+            color @fade-in-duration @fade-in-timing-function;
+        }
+
+        &:before,
+        &:after {
+          transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__filter-panel-icon {
+      transition: fill @fade-in-duration @fade-in-timing-function,
+        stroke @fade-in-duration @fade-in-timing-function;
+
+      .detail-pages-filter-23__filter_selected:not(
+          .detail-pages-filter-23__filter_expanded
+        )
+        & {
+        .theme-animation & {
+          transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__filter-list-wrap {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__filter-list-btn-apply,
+    &__view-more-button {
+      &:before {
+        transition: opacity @fade-in-duration @fade-in-timing-function;
+      }
+
+      .theme-animation & {
+        .button__inner {
+          transition: background-color @fade-in-duration
+              @fade-in-timing-function,
+            color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__filter-list-selected {
+      transition: border-bottom-color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+
+  .detail-pages-list {
+    &-ui__info-msg {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &-23 {
+      &__type-list {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__continuum-container {
+        transition: background-color @fade-in-duration @fade-in-timing-function,
+          color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__item {
+        .detail-pages-list-23__tag,
+        .detail-pages-list-23__title {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+
+        .detail-pages-list-23__arrow {
+          svg {
+            transition: fill @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-layout-box() {
+  .theme-animation .layout-box-ui-23 {
+    &.layout-box {
+      &--show-borders > div:after {
+        transition: opacity @fade-in-duration @fade-in-timing-function;
+      }
+
+      &--white-border > div {
+        transition: border-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-location-viewer() {
+  .theme-animation .locations-viewer-ui-23 {
+    .horizontal-scrollbar-wrapper:before {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    .locations-viewer-23 {
+      &__country-title,
+      &__country-counter,
+      &__office-name,
+      &__office-address,
+      &__office-contact,
+      &__office-map {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    .horizontal-scrollbar-item:after {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-text-field() {
+  .theme-animation {
+    .text-field-ui,
+    .phone-ui,
+    .comment-ui,
+    .dropdown-list,
+    .dropdown-list-ui,
+    .location-field-ui,
+    .location-fields__column {
+      .form-component {
+        &__label {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+
+        &__field {
+          transition: border @fade-in-duration @fade-in-timing-function,
+            color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    .comment-ui .comment__wrapper {
+      transition: border @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-dropdown-list() {
+  .theme-animation {
+    .form-component {
+      .select2-selection {
+        &[aria-invalid="false"] .select2-selection__rendered {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+
+        &__arrow {
+          b:after {
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-checkbox() {
+  .theme-animation {
+    .checkbox-ui {
+      .checkbox__label {
+        a,
+        & > p,
+        & > span {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+
+        &:before {
+          transition: border-color @fade-in-duration @fade-in-timing-function,
+            background-color @fade-in-duration @fade-in-timing-function;
+        }
+
+        &:after {
+          transition: border-color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-form-constructor() {
+  .theme-animation {
+    .form-component {
+      &.show-error,
+      &.show-success {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__input,
+      &__big-message,
+      &__simple-message,
+      .cancel-link > a,
+      .submit-again-redesign,
+      .validation_hint {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .link-with-bottom-arrow .svg-link-arrow {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+
+      .button-ui {
+        transition: background-color @fade-in-duration @fade-in-timing-function,
+          color @fade-in-duration @fade-in-timing-function;
+
+        &:after {
+          transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      .captcha-ui {
+        .captcha__input {
+          transition: color @fade-in-duration @fade-in-timing-function,
+            border-color @fade-in-duration @fade-in-timing-function;
+        }
+
+        .form-component__input-label {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      .checkbox + .text,
+      .captcha + .text {
+        p {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-file-upload() {
+  .theme-animation .file-upload {
+    &__input {
+      transition: border-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__field {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__placeholder {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__upload-icon:before {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-button() {
+  .button-ui-23 {
+    .theme-animation & .button__inner {
+      transition: background-color @fade-in-duration @fade-in-timing-function,
+        color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &:before {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-instagram-feed() {
+  .instagram-feed-ui-23 {
+    .instagram-feed {
+      &__username,
+      &__full-name {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__progress-bar {
+        &:after {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+
+        .slider {
+          &:before {
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-news-filter() {
+  .news-filter-23 {
+    &__filter {
+      &.pinned-filter--fixed,
+      &.pinned-filter--bottom {
+        .theme-animation & {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__input {
+      .form-component__field {
+        transition: border @fade-in-duration @fade-in-timing-function;
+      }
+
+      .select2-selection__rendered {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__item {
+      &:before {
+        transition: opacity @fade-in-duration @fade-in-timing-function;
+      }
+
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      article {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__title {
+      .link-with-bottom-arrow {
+        .theme-animation & {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      .svg-link-arrow {
+        .theme-animation & {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__error-message {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__label {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-news-releases() {
+  .news-releases-23 {
+    &__title {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__item {
+      transition: color @fade-in-duration @fade-in-timing-function;
+
+      &:before {
+        transition: opacity @fade-in-duration @fade-in-timing-function;
+      }
+
+      article {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__link {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .svg-link-arrow {
+        .theme-animation & {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__arrow svg {
+      .theme-animation & {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-contact-details-reference() {
+  .theme-animation .contact-details-reference-ui-23 {
+    .contact-details-reference {
+      &__container {
+        transition: border-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__title,
+      &__name,
+      &__position,
+      &__phone,
+      &__phone-title,
+      &__email {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__email svg {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-rollover-blocks() {
+  .rollover-blocks {
+    .rollover-blocks-ui-23 .rollover-blocks {
+      &__block:before,
+      &__description-rollover,
+      &__content {
+        transition: border @fade-in-duration @fade-in-timing-function,
+          background-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-scrolling-blocks() {
+  .scrolling-blocks-ui-23 {
+    .scrolling-blocks {
+      &__container {
+        .scrolling-block {
+          &__link {
+            transition: background-color @fade-in-duration
+              @fade-in-timing-function;
+          }
+
+          &__subtitle {
+            .theme-animation & {
+              transition: color @fade-in-duration @fade-in-timing-function;
+            }
+          }
+
+          &__title,
+          &__description {
+            transition: color @fade-in-duration @fade-in-timing-function;
+          }
+
+          &__arrow {
+            & svg {
+              transition: fill @fade-in-duration @fade-in-timing-function;
+            }
+          }
+
+          &__image {
+            &.is-svg {
+              transition: filter @fade-in-duration @fade-in-timing-function;
+            }
+          }
+
+          &__wrapper {
+            &:before {
+              transition: opacity @fade-in-duration @fade-in-timing-function;
+            }
+          }
+        }
+      }
+
+      &__progress-bar {
+        &:after {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+
+        .slider {
+          &:before {
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-scrolling-nested-blocks() {
+  .scroll-blocks-ui-23 {
+    &__border-bottom {
+      transition: color @fade-in-duration @fade-in-timing-function,
+        border @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__border-left {
+      transition: background-color @fade-in-duration @fade-in-timing-function,
+        border @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__text {
+      &-header {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      & a {
+        .theme-animation & {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+
+        & svg {
+          .theme-animation & {
+            transition: fill @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+
+    &__image_dark-mode,
+    &__image_light-mode {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-share-menu() {
+  .share-menu-ui-23 {
+    .share-menu__item {
+      &:not(:last-child):after {
+        transition: border @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-two-level-tabs() {
+  .two-level-tabs-ui-23 {
+    .two-level-tabs__link {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-video-showcase() {
+  .video-showcase-ui-23 {
+    .video-showcase {
+      &__title {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__seek {
+        &::-moz-range-progress {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+      }
+
+      &__tray-seek {
+        &::-webkit-progress-value {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+
+        &::-moz-progress-bar {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+      }
+
+      &__progress-bar-track {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__wait-for-play svg path,
+      &__nav-control svg {
+        transition: fill @fade-in-duration @fade-in-timing-function,
+          stroke @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    .owl-stage-outer {
+      &:before,
+      &:after {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-icon-gradient() {
+  &:before,
+  &:after {
+    transition: opacity @fade-in-duration @fade-in-timing-function;
+  }
+}
+
+.fade-in-animation-categories-switcher() {
+  .theme-animation .categories-switcher-ui-23 {
+    .categories-switcher {
+      &__title,
+      &__description,
+      &__tile-title {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__arrow svg {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__tile-title {
+        &:after {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-upcoming-event() {
+  .upcoming-event-ui-23 {
+    &__main-title,
+    &__date,
+    &__info {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__link {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__button-inner {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function,
+          background-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__card:before,
+    &__button:before {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__arrow-button {
+      svg {
+        .theme-animation & {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-news-page() {
+  .news-page-23 {
+    &__content-static {
+      transition: border-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__header {
+      .header-upper-part__title {
+        transition: color @fade-in-duration @fade-in-timing-function;
+
+        .h1-custom-style {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__top-title,
+    &__date,
+    &__author {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-events-viewer() {
+  .events-viewer-ui-23 {
+    .events-viewer23 {
+      &__item {
+        .theme-animation & {
+          transition: border-color @fade-in-duration @fade-in-timing-function;
+        }
+
+        svg {
+          .theme-animation & {
+            transition: fill @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+
+      &__date,
+      &__title,
+      &__title-link,
+      &__venue,
+      &__location,
+      &__content-reference {
+        .theme-animation & {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-news-feed() {
+  .news-events-ui-23 {
+    &__main-title,
+    &__date,
+    &__link {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__item {
+      transition: border-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__link-icon,
+    &__logo {
+      transition: fill @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-responsive-image() {
+  .responsive-image__img,
+  .zoom-on-hover .responsive-image__img {
+    .theme-animation .enable-fade-in & {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-pagination() {
+  .pagination-ui-23 {
+    .theme-animation & {
+      &__title {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__block {
+        .icon-arrow-in-circle {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-featured-story-single() {
+  .featured-story-single-ui-23 {
+    &__header,
+    &__content-type,
+    &__tags,
+    &__description {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__continuum-container {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__link-text {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__link-icon {
+      .theme-animation & {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-featured-story-multiple() {
+  .featured-stories-multiple-ui-23 {
+    &__element {
+      @media @desktop {
+        &:nth-child(3) {
+          transition: border-color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__content-type,
+    &__continuum,
+    &__tags,
+    &__date {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__continuum-container {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__description {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__link-icon {
+      .theme-animation & {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-book-meeting() {
+  .book-meeting-ui-23 {
+    .book-meeting-ui-23 {
+      &__link {
+        .theme-animation & {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      &__btn {
+        &:before {
+          transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+
+        .theme-animation & {
+          .button__inner {
+            /* stylelint-disable */
+            transition: background-color @fade-in-duration
+                @fade-in-timing-function,
+              color @fade-in-duration @fade-in-timing-function;
+            /* stylelint-enable */
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-leadership-viewer() {
+  .leadership-viewer-ui-23 {
+    &__title,
+    &-scroll__title,
+    &__arrow svg,
+    &__photo-poster,
+    &-scroll__photo-poster {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &-scroll__progress-bar:after {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &-scroll__progress-bar .slider {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-icon-plus-text() {
+  .icon-plus-text-ui-23 {
+    .block-title,
+    .block-description {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-person-info() {
+  .person-info-23 {
+    &__label,
+    &__title,
+    &__description,
+    &__desktop-placeholder {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__connect-text,
+    &__links li,
+    &__links a {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__person-name-light {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__block-title,
+    &__links-wrapper {
+      transition: border @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__arrow {
+      .theme-animation & {
+        svg {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-book-meeting-page() {
+  .book-meeting-page-23 {
+    &__event-details,
+    &__date,
+    &__event-title,
+    &__address {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-related-content-list() {
+  .related-content-list-ui-23 {
+    &__title,
+    &__item-content-type-tag,
+    &__item-tags {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__item-link {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+
+        svg {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__item {
+      transition: border @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-detail-page() {
+  .detail-page23 {
+    &__article {
+      &-info {
+        transition: border @fade-in-duration @fade-in-timing-function;
+
+        .info-title,
+        .info-content {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+
+    &-author__connect-text {
+      .theme-animation & {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &-download__button {
+      .theme-animation & {
+        .link-with-bottom-arrow {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+
+        .svg-link-arrow {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-timeline() {
+  .timeline-ui-23 {
+    &__event {
+      &-dot,
+      &-dot:after {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &-point:after {
+        transition: border-color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__description {
+      &,
+      a {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-case-study() {
+  .case-study-page23__container {
+    .section-columns {
+      .details {
+        .intro-title {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+
+        .static-divider,
+        .static-section {
+          transition: border-color @fade-in-duration @fade-in-timing-function;
+        }
+
+        .static-section {
+          .static-subtitle,
+          .static-content {
+            transition: color @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-scroll-infographic() {
+  .theme-animation {
+    .scroll-infographic-ui-23 {
+      &__item {
+        transition: border-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__item-description,
+      &__item-description a,
+      &__item-title {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__scrollable-section.vertical-scroll {
+        & ~ .vertical-scroll-gradient {
+          &.top-gradient,
+          &.bottom-gradient {
+            transition: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-search() {
+  .theme-animation .search-ui-23 {
+    .search-results,
+    .search {
+      &__title-link,
+      &__description,
+      &__auto-correct-term,
+      &__counter {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__exception-message,
+      &__auto-correct-message {
+        transition: border-bottom-color @fade-in-duration
+            @fade-in-timing-function,
+          color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__field label[for="new_form_search"] {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__input {
+        transition: border-bottom-color @fade-in-duration
+            @fade-in-timing-function,
+          background-color @fade-in-duration @fade-in-timing-function,
+          color @fade-in-duration @fade-in-timing-function;
+
+        &-holder {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+
+        &::placeholder {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      &__item {
+        transition: border-bottom-color @fade-in-duration
+          @fade-in-timing-function;
+      }
+
+      &__submit {
+        &:after {
+          transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+
+        .button-text {
+          transition: background-color @fade-in-duration
+              @fade-in-timing-function,
+            color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      &__view-more:after {
+        transition: opacity @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__view-more-text {
+        transition: background-color @fade-in-duration @fade-in-timing-function,
+          color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    .frequent-searches {
+      &-ui-23 {
+        transition: background-color @fade-in-duration @fade-in-timing-function,
+          color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__input::placeholder {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-timeline-slider() {
+  .theme-animation {
+    .timeline-slider-ui-23 {
+      &__slide-title,
+      &__slide-description {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .bullet-list {
+        li:before {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+      }
+
+      .numbered-list {
+        li:before {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      &__switcher-button {
+        transition: border-color @fade-in-duration @fade-in-timing-function,
+          background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .js-tabs-links-list:before {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      &__button-prev,
+      &__button-next {
+        transition: color @fade-in-duration @fade-in-timing-function;
+
+        svg {
+          transition: fill @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-text() {
+  .text-ui-23 {
+    transition: color @fade-in-duration @fade-in-timing-function;
+    // slider provides it's own transition, duplication causes a delay in Webkit
+    .single-slide__content-container &,
+    .slider-ui-23 &,
+    .header-upper-part__title & {
+      transition: none;
+    }
+
+    .scaling-of-text-wrapper {
+      .theme-animation & {
+        a:not(.bold-underlined-hover) {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      .color-periwinkle-blue,
+      .rte-text-primary-color {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    .text__table-wrapper {
+      table[border] {
+        th,
+        td {
+          transition: border-color @fade-in-duration @fade-in-timing-function;
+        }
+
+        &.table-borders {
+          tr {
+            transition: border-color @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+
+    .bullet-list li:before {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    .numbered-list li:before {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-slider() {
+  .theme-animation {
+    .slider-ui-23 {
+      transition: color @fade-in-duration @fade-in-timing-function;
+
+      .owl-item {
+        .single-slide-ui {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+
+          .background-video {
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+
+      .single-slide__content-container,
+      .single-slide__cta-link {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .single-slide__cta-container {
+        .link-with-right-arrow,
+        .link-with-bottom-arrow {
+          transition: color @fade-in-duration @fade-in-timing-function;
+
+          .svg-link-arrow {
+            transition: fill @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+
+      .single-slide__cta-link {
+        &.add-arrow {
+          .arrow {
+            &:after,
+            &:before {
+              transition: background-color @fade-in-duration
+                @fade-in-timing-function;
+            }
+          }
+        }
+      }
+
+      .slider__progress-bar {
+        .slider__dot {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+
+          &:after {
+            transition: background-color @fade-in-duration
+              @fade-in-timing-function;
+          }
+        }
+      }
+
+      .slider__pagination {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .slider__navigation {
+        .slider-navigation-arrow {
+          svg {
+            transition: fill @fade-in-duration @fade-in-timing-function;
+          }
+        }
+      }
+    }
+
+    .single-slide-ui.text-image-slide-ui {
+      .slide-image--desktop {
+        .light-desktop-image,
+        .dark-desktop-image {
+          transition: filter @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      .desktop-image-container:before {
+        transition: opacity @fade-in-duration @fade-in-timing-function;
+      }
+    }
+  }
+}
+
+.fade-in-animation-gradient-button() {
+  .bth-dark-gradient,
+  .bth-light-gradient,
+  .bth-disable {
+    transition: opacity @fade-in-duration @fade-in-timing-function;
+  }
+
+  .theme-animation .gradient-border-button {
+    transition: color @fade-in-duration @fade-in-timing-function;
+  }
+}
+
+.fade-in-animation-nested-text-block() {
+  .nested-text-block__item {
+    &-content {
+      transition: color @fade-in-duration @fade-in-timing-function,
+        border-color @fade-in-duration @fade-in-timing-function,
+        background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &-border {
+      transition: border-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    .scaling-of-text-wrapper {
+      .theme-animation & {
+        a {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-accordion() {
+  .accordion-23 {
+    .theme-animation & {
+      &__title {
+        transition: color @fade-in-duration @fade-in-timing-function;
+
+        &.accordion-23__title-open {
+          transition: color @fade-in-duration @fade-in-timing-function;
+        }
+      }
+
+      &__button {
+        &:before,
+        &:after {
+          transition: background-color @fade-in-duration
+            @fade-in-timing-function;
+        }
+      }
+    }
+
+    &__preview-description {
+      .bullet-list li:before {
+        transition: background-color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .numbered-list li:before {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &__preview-description,
+    &__read-less {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__parsys {
+      transition: border-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__arrow {
+      transition: fill @fade-in-duration @fade-in-timing-function;
+    }
+
+    &__divider {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}
+
+.fade-in-animation-single-section() {
+  .single-section {
+    .theme-animation & {
+      .custom-link {
+        transition: color @fade-in-duration @fade-in-timing-function;
+      }
+
+      .svg-link-arrow {
+        transition: fill @fade-in-duration @fade-in-timing-function;
+      }
+    }
+
+    &-two-columns {
+      &-ui.text-image-section-two-columns-ui {
+        .desktop-image-container {
+          &:before {
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+          }
+        }
+
+        .slide-image {
+          &--desktop {
+            @media @desktop {
+              .gradient-border-picture {
+                .desktop-image-placeholder {
+                  transition: opacity @fade-in-duration @fade-in-timing-function;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-in-animation-anchors() {
+  .theme-animation .anchors-ui-23 {
+    .to-top-button:before {
+      transition: opacity @fade-in-duration @fade-in-timing-function;
+    }
+
+    .to-top-button-container {
+      transition: background-color @fade-in-duration @fade-in-timing-function;
+    }
+
+    .anchors-23__link {
+      transition: color @fade-in-duration @fade-in-timing-function;
+    }
+  }
+}

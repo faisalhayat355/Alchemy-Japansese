@@ -1,0 +1,115 @@
+/*
+ * All Rights Reserved. All information contained herein is, and remains the property of EPAM Systems, Inc.
+ * and/or its suppliers and is protected by international intellectual property law. Dissemination of this
+ * information or reproduction of this material is strictly forbidden, unless prior written permission is
+ * obtained from EPAM Systems, Inc
+ */
+@color-white:                   #fff;
+@color-white-hover:             #eee;
+@color-white-smoke:             #f7f7f7;
+
+@color-light-gray:              #eee;
+@color-smoke-gray:              #ebebeb;
+@color-paper-gray:              #e5e5e5;
+@color-mercury-gray:            #c4c4c4;
+@color-gray-alto:               #d6d6d6;
+@color-gray:                    #bbb;
+@color-dark-gray:               #231f20;
+@color-light-smoke:             #e1e1e1;
+@color-bright-grey:             #808080;
+
+@color-black:                   #000;
+@color-black-hover:             #1a1a1a;
+@color-almost-black:            #222;
+@color-almost-black-hover:      #111;
+
+@color-silver:                  #c0c0c0;
+@color-silver-hover:            #b1b1b1;
+@color-eclipse:                 #393939;
+@color-eclipse-hover:           #2c2c2c;
+
+@color-orange-jaffa:            #f38049;
+@color-light-red:               #f15c43;
+@color-red:                     #d84831;
+@color-slightly-light-red:      #ef5e4b;
+
+@color-light-blue:              #76cdd8;
+@color-light-blue-hover:        #7bbbc6;
+@color-light-dark-blue:         #76b5d8;
+@color-cornflower-blue:         #5596fc;
+@color-cornflower-blue-hover:   #0084ce;
+@color-blue:                    #008ace;
+@color-blue-hover:              #2f7db5;
+@color-midnight-blue:           #2f3a50;
+@color-midnight-blue-hover:     #1b2838;
+@color-firefly-blue:            #0a162c;
+@color-dark-blue:               #263852;
+@color-dark-blue-hover:         #0e243d;
+
+@color-light-green:             #c9db48;
+@color-green-hover:             #c2ce52;
+
+@color-light-yellow:            #ffc000;
+@color-light-yellow-hover:      #e2b400;
+@color-yellow-amber:            #fec010;
+
+@color-wild-sand:               #f5f5f5;
+@color-alto:                    #dedede;
+@color-silver:                  #bababa;
+@color-light-silver:            #c2c2c2;
+
+@color-ec-light-blue:           #abdbdd;
+@color-ec-light-blue-hover:     #97c5c9;
+@color-ec-dark-blue:            #10303e;
+@color-ec-dark-blue-hover:      #0e2733;
+
+@color-tio-teal:                #78eac1;
+@color-tio-violet:              #7954ff;
+@color-tio-light-grey:          #fcfcfc;
+@color-tio-medium-grey:         #f4f4f4;
+@color-ec-white:                #fff;
+@color-shadowed-steel:          #4b4b4b;
+@color-dark-grey:               #8d8d8d;
+@color-wild-sand:               #f6f6f6;
+@color-nobel:                   #b3b3b3;
+@color-cornflower-blue:         #6bc6d2;
+
+//redesign 2023
+@light-theme:                   #fbfafa;
+@black-theme:                   #060606;
+@color-cod-gray:                #1b1b1b;
+@color-bright-blue:             #00fff0;
+@color-bright-turquoise:        #00ffd3;
+@color-bright-blue-hover:       #6bc6d2;
+@color-laguna-blue:             #00f6ff;
+@color-deep-blue:               #0047ff;
+@color-gray-blue:               #0078c2;
+@color-bright-purple:           #c3a6ff;
+@color-purple:                  #b896ff;
+@color-deep-purple:             #ac8eff;
+@color-dark-purple:             #8453d2;
+@color-bright-yellow:           #fec010;
+@color-bright-yellow-hover:     #e2b400;
+@color-fury-orange:             #f06516;
+@color-bright-orange:           #ff7701;
+@color-bright-red:              #f03016;
+@color-modern-red:              #e80202;
+@color-ribbon-blue:             #0047ff;
+@color-periwinkle-blue:         #7ba8ff;
+@color-ivory:                   #fbfafa;
+@color-natural-grey:            #8a8a8a;
+@color-dove-gray:               #717171;
+@color-boulder-gray:            #777;
+@color-concrete:                #f2f2f2;
+
+@color-quick-silver:            #a0a0a0;
+@color-mine-shaft:              #262626;
+
+@color-sunset-orange:           #ff4d40;
+
+@color-dove-grave:              #717171;
+@color-cornflower-blue:         #f2f2f2e6;
+
+@color-black-opacity-80: rgba(6, 6, 6, .8);
+@color-dark-gray-opacity-90: rgba(27, 27, 27, .9);
+@color-light-gray-opacity-95: rgba(242, 242, 242, .95);

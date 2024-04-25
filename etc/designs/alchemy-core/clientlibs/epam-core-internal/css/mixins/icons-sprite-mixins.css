@@ -1,0 +1,106 @@
+/*
+ * All Rights Reserved. All information contained herein is, and remains the property of EPAM Systems, Inc.
+ * and/or its suppliers and is protected by international intellectual property law. Dissemination of this
+ * information or reproduction of this material is strictly forbidden, unless prior written permission is
+ * obtained from EPAM Systems, Inc
+ */
+
+@epam-sprite-path: "/etc/designs/epam-core/images/sprites/sprite-redesign_21.svg";
+
+.icon-body() {
+    content: "";
+    display: inline-block;
+}
+
+.set-background-image-mixin(@id, @width, @height) {
+    background-image: url("%40%7bepam-sprite-path%7d.html#@{id}");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: @height;
+    width: @width;
+}
+
+.set-background-image-options(@width, @height) {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: @height;
+    width: @width;
+}
+
+.set-background-image(@id) {
+    background-image: url("%40%7bepam-sprite-path%7d.html#@{id}");
+}
+
+.filter-icon-white() {
+    .set-background-image-mixin('icon-details-filter', 30px, 26px);
+}
+
+.filter-icon-colored() {
+    .set-background-image-mixin('icon-details-filter-colored', 30px, 26px);
+}
+
+.plus-blue() {
+    .set-background-image-mixin('icon-plus-blue', 14px, 14px);
+}
+
+.checkmark-blue() {
+    .set-background-image-mixin('icon-checkmark-blue', 16px, 16px);
+}
+
+.icon-chevron-white() {
+    .set-background-image-mixin('icon-chevron-white', 15px, 10px);
+}
+
+/*
+it's important to define background-image url separately in each component
+because path for each directory will be different
+ */
+.arrow-down() {
+    .icon-body();
+    .set-background-image-mixin("icon-pointer-down-white", @width: 13px, @height: 18px);
+
+    .light-mode & {
+        .set-background-image("icon-pointer-down-black");
+    }
+
+    .dark-mode & {
+        .set-background-image("icon-pointer-down-white");
+    }
+}
+
+.arrow-down-with-fade-in() {
+    &:before,
+    &:after {
+        .icon-body();
+        .set-background-image-options(@width: 13px, @height: 18px);
+    }
+
+    &:before {
+        background-image: url("%40%7bepam-sprite-path%7d.html#icon-pointer-down-white");
+    }
+
+    &:after {
+        position: absolute;
+        opacity: 0;
+        transition: opacity @fade-in-duration @fade-in-timing-function;
+        background-image: url("%40%7bepam-sprite-path%7d.html#icon-pointer-down-black");
+    }
+
+    .light-mode & {
+        &:after {
+            opacity: 1;
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+
+        &:before {
+            opacity: 0;
+            transition: opacity @fade-in-duration @fade-in-timing-function;
+        }
+
+        &.theme-animation {
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+}

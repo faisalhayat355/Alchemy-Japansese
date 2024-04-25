@@ -1,0 +1,29 @@
+/*
+in case this font should be applied inside pseude elements
+ */
+.body-text-small() {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    letter-spacing: .03em;
+
+    @media @desktop {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        letter-spacing: .04em;
+        font-weight: 500;
+    }
+}
+
+.large-input-placeholder() {
+    font-weight: 100;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: .06em;
+
+    @media @desktop {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        letter-spacing: .03em;
+    }
+}

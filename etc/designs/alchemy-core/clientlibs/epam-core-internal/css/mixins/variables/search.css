@@ -1,0 +1,13 @@
+/*
+ * All Rights Reserved. All information contained herein is, and remains the property of EPAM Systems, Inc.
+ * and/or its suppliers and is protected by international intellectual property law. Dissemination of this
+ * information or reproduction of this material is strictly forbidden, unless prior written permission is
+ * obtained from EPAM Systems, Inc
+ */
+@search-panel-padding-mobile: 6rem;
+@search-panel-padding-vertical: 8.1rem;
+@search-panel-indent: 3.9rem;
+
+@search-indent-from-input: 3.2rem;
+@submit-button-padding: 4.6rem;
+@submit-button-font-size: 2.2rem;
